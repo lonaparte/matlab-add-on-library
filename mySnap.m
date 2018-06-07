@@ -6,7 +6,7 @@ function mySnap(model)
 %   mySnap('vdp');
 % Original Author: Sean de Wolski
 % Original Page: (https://www.mathworks.com/matlabcentral/answers/361307-how-do-i-include-my-simulink-model-in-a-live-script?s_tid=srchtitle)
-% Modified and Used by Li CHENG
+% Modified and Used by Lonaparte CHENG
 import slreportgen.report.*
 sim(model,0.001)
 % open_system(model)
