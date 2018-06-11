@@ -13,5 +13,5 @@ function [F,fx] = myFFT(x,fsample)
         fx = (0:fsample/(Sampling-1):fsample)-fsample/2;
         value = abs(fft(x));
         norme = max(value);
-        F = fftshift(value)/norme;
+        F = fftshift(value)/fsample;
     end
