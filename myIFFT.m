@@ -2,12 +2,12 @@ function [yef,tt] = myIFFT(varargin)
 % Calculate the IFFT in a normal used form.
 % Usage:
 %   [yef,tt] = myIFFT(F,fx,N)
-%   [yef,tt] = myIFFT(F,fx,N,'notabs')
+%   [yef,tt] = myIFFT(F,fx,N,'noabs')
 % Input:
 %   F: the spectra of signal
 %   fx: the correspond frequency series, the effect element is fx(end)
 %   N: N is the FFT point number to realize
-%   'notabs': do not calculate the absolute value of the result
+%   'noabs': do not calculate the absolute value of the result
 % Output:
 %   yef,tt: to plot the result
 % Modified and Used by Lonaparte CHENG
@@ -21,7 +21,7 @@ dt = t/length(y);
 tt = (0:dt:dt*(length(y)-1)) - t/2;
 if nargin == 3
     yef = ifftshift(abs(y));
-elseif varargin{4} == 'notabs'
+elseif varargin{4} == 'noabs'
     yef = ifftshift(y);
 end
 
