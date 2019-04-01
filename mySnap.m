@@ -9,6 +9,7 @@ function mySnap(model)
 % Modified and Used by Lonaparte CHENG
 % Website: https://github.com/lonaparte/matlab-add-on-library
 import slreportgen.report.*
+warning('off');
 sim(model,0.001)
 % open_system(model)
 r = Report(tempname, 'html');

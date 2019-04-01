@@ -17,8 +17,8 @@ fx = varargin{2};
 N = varargin{3};
 y = ifft(F*N,N);
 t = (length(y)-1)/2/fx(end);
-dt = t/length(y);
-tt = (0:dt:dt*(length(y)-1)) - t/2;
+dt = t/N;
+tt = (0:dt:dt*(N-1)) - t/2;
 if nargin == 3
     yef = ifftshift(abs(y));
 elseif varargin{4} == 'noabs'
